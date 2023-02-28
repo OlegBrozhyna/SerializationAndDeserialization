@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.lang.reflect.Field;
 
 public class Serializer {
-    public static void serialize(Object obj, String fileName) {
+     public static void serialize(Object obj, String fileName) {
         Field[] fields = obj.getClass().getDeclaredFields();
         String values = "";
         try {
@@ -24,9 +24,7 @@ public class Serializer {
 
         if (!values.isEmpty()) {
             try {
-                FileWriter fileWriter = new FileWriter(fileName);
-                fileWriter.write(values);
-                fileWriter.close();
+
             }
             catch (Exception e) {
                 e.printStackTrace();
@@ -66,5 +64,6 @@ public class Serializer {
         return null;
     }
 }
+
 
 
